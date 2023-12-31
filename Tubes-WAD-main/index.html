@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesanan Meja 1</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .order-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-info {
+    width: 75%;
+  }
+  .status {
+    width: 10%;
+    height: 5%;
+    background-color: #ddd;
+    padding: 0px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Pesanan Meja 1</h2>
+  <div class="order-item">
+    <div class="menu-info">
+      <h3>menu makanan 1</h3>
+      <p>tipe makanan 1</p>
+    </div>
+    <div class="status" id="status1">
+      <p>status</p>
+    </div>
+  </div>
+  <div class="order-item">
+    <div class="menu-info">
+      <h3>menu makanan 3</h3>
+      <p>tipe makanan 2</p>
+    </div>
+    <div class="status" id="status2">
+      <p>status</p>
+    </div>
+  </div>
+  <div class="order-item">
+    <div class="menu-info">
+      <h3>menu makanan 3</h3>
+      <p>tipe makanan 3</p>
+    </div>
+    <div class="status" id="status3">
+      <p>status</p>
+    </div>
+  </div>
+</div>
+<script>
+  function changeStatus(element) {
+    element.style.backgroundColor = "green";
+    console.log("Status berubah menjadi hijau");
+  }
+
+  document.getElementById("status1").addEventListener("click", function() {
+    changeStatus(this);
+  });
+  document.getElementById("status2").addEventListener("click", function() {
+    changeStatus(this);
+  });
+  document.getElementById("status3").addEventListener("click", function() {
+    changeStatus(this);
+  });
+</script>
+</body>
+</html>
